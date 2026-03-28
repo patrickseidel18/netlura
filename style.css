@@ -1,0 +1,274 @@
+/* Estilos inspirados na Netflix */
+
+body {
+    /* background-color: Define a cor de fundo do corpo da página */
+    background-color: #060606;
+    /* color: Define a cor do texto */
+    color: #ffffff;
+    /* font-family: Define a família de fontes */
+    font-family: Arial, sans-serif;
+    /* margin: Remove margens externas */
+    margin: 0;
+    /* padding: Remove preenchimento interno */
+    padding: 0;
+    /* display: Usa flexbox para layout */
+    display: flex;
+    /* justify-content: Centraliza horizontalmente */
+    justify-content: center;
+    /* align-items: Centraliza verticalmente */
+    align-items: center;
+    /* height: Define altura total da viewport */
+    height: 100vh;
+    /* transition: Transição suave para mudanças de tema */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+main {
+    /* text-align: Alinha o texto ao centro */
+    text-align: center;
+    /* max-width: Define largura máxima */
+    max-width: 800px;
+    /* width: Define largura como 100% até o máximo */
+    width: 100%;
+}
+
+header h1 {
+    /* font-size: Define o tamanho da fonte */
+    font-size: 3rem;
+    /* margin-bottom: Define margem inferior */
+    margin-bottom: 2rem;
+    /* color: Define a cor do texto */
+    color: #ffffff;
+}
+
+#theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 54px;
+    height: 30px;
+    background-color: #e50914;
+    border: none;
+    cursor: pointer;
+    border-radius: 999px;
+    padding: 0;
+    outline: 0;
+    transition: background-color 0.3s ease;
+    animation: none;
+}
+
+#theme-toggle.active {
+    animation: pulse 1.7s infinite;
+}
+
+#manage-profile-btn {
+    background-color: rgba(229, 9, 20, 0.95);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    margin: 0 auto;
+}
+
+.bottom-controls {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile-actions.hidden {
+    display: none;
+}
+
+.bottom-controls.expanded #manage-profile-btn {
+    box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.35);
+}
+
+.action-btn {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 999px;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.action-btn:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-1px);
+}
+
+
+#manage-profile-btn:hover {
+    background-color: #b2070f;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(233, 9, 20, 0.5);
+    }
+    70% {
+        transform: scale(1.02);
+        box-shadow: 0 0 0 10px rgba(233, 9, 20, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(233, 9, 20, 0);
+    }
+}
+
+#theme-toggle::after {
+    content: '';
+    display: block;
+    width: 26px;
+    height: 26px;
+    background: #ffffff;
+    border-radius: 50%;
+    margin: 2px;
+    transition: margin 0.3s ease, transform 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background-color: #b2070f;
+}
+
+.profiles {
+    /* list-style: Remove marcadores da lista */
+    list-style: none;
+    /* display: Usa flexbox para layout */
+    display: flex;
+    /* justify-content: Centraliza horizontalmente */
+    justify-content: center;
+    /* gap: Define espaço entre itens */
+    gap: 2rem;
+    /* flex-wrap: Permite quebra de linha */
+    flex-wrap: wrap;
+}
+
+.profile {
+    /* text-align: Alinha o texto ao centro */
+    text-align: center;
+    /* transition: Adiciona transição suave */
+    transition: transform 0.3s ease;
+}
+
+.profile:hover {
+    /* transform: Aumenta o tamanho no hover */
+    transform: scale(1.1);
+}
+
+.profile img {
+    /* width: Define largura da imagem */
+    width: 150px;
+    /* height: Define altura da imagem */
+    height: 150px;
+    /* border-radius: Torna os cantos ligeiramente arredondados */
+    border-radius: 10px;
+    /* object-fit: Ajusta a imagem sem distorcer */
+    object-fit: cover;
+    /* border: Adiciona borda branca */
+    border: 3px solid #ffffff;
+    /* transition: Adiciona transição na borda */
+    transition: border-color 0.3s ease;
+}
+
+.profile:hover img {
+    /* border-color: Muda cor da borda no hover */
+    border-color: #e50914;
+}
+
+.profile figcaption {
+    /* margin-top: Define margem superior */
+    margin-top: 1rem;
+    /* font-size: Define tamanho da fonte */
+    font-size: 1.2rem;
+    /* color: Define cor do texto */
+    color: #ffffff;
+}
+
+/* Estilos para modo claro */
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.light-mode header h1 {
+    color: #000000;
+}
+
+.light-mode .profile figcaption {
+    color: #000000;
+}
+
+.light-mode .profile img {
+    border-color: #000000;
+}
+
+.light-mode #theme-toggle {
+    background-color: #000000;
+    border: 1px solid #ffffff;
+}
+
+.light-mode #theme-toggle::after {
+    margin-left: 26px;
+    background: #ffffff;
+}
+
+.light-mode #theme-toggle:hover {
+    background-color: #3e3e3e;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .profiles {
+        gap: 1rem;
+    }
+
+    .profile img {
+        display: block;
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile figcaption {
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
+}
+
+/* Responsividade para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .profile img {
+        width: 120px;
+        height: 120px;
+    }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Selecione um perfil para começar a assistir na Netflix">
+    <title>Netflix - Seleção de Perfil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Quem está assistindo?</h1>
+        </header>
+
+        <ul class="profiles">
+            <li class="profile">
+                <a href="catalogo/catalogo.html" class="Perfil">
+                <figure>
+                    <img src="/Assets/perfil-1.jpg" alt="mulher coreana sorrindo">
+                    <figcaption>Alessandra</figcaption>
+                </figure>
+            </a>
+            </li>
+
+            <li class="profile">
+                <a href="catalogo/catalogo.html" class="Perfil">
+                <figure>
+                    <img src="/Assets/perfil-2.jpg" alt="uma arte de anime">
+                    <figcaption>Patrick</figcaption>
+                </figure>
+                </a>
+            </li>
+        </ul>
+
+        <div class="bottom-controls">
+            <button id="manage-profile-btn" aria-label="Gerenciar perfil" title="Gerenciar perfil">Gerenciar perfil</button>
+            <div class="profile-actions hidden" id="profile-actions">
+                <button class="action-btn" id="edit-profile" aria-label="Editar perfil">Editar perfil</button>
+                <button class="action-btn" id="add-profile" aria-label="Adicionar perfil">Adicionar perfil</button>
+                <button class="action-btn" id="delete-profile" aria-label="Excluir perfil">Excluir perfil</button>
+            </div>
+        </div>
+    </main>
+
+    <button id="theme-toggle" aria-label="Alternar modo" title="Alternar modo"></button>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
